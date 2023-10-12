@@ -21,7 +21,6 @@ time.sleep(1.5)
 # 검색창에 검색 키워드 입력
 search = "data"
 
-
 # 검색창 클릭
 driver.find_element(By.CSS_SELECTOR, 'button#btn_search.btn_search').click()
 time.sleep(1.5)
@@ -38,7 +37,6 @@ time.sleep(1.5)
 info_list_all = driver.find_elements(By.XPATH, '//*[@id="recruit_info_list"]/div[1]/div')
 info_list_addr = driver.find_elements(By.XPATH, '//*[@id="recruit_info_list"]/div[1]/div/div/h2/a')
     
-
 # 다음 채용정보 리스트로 넘어가기
 next_buttom = len(driver.find_elements(By.XPATH, '//*[@id="recruit_info_list"]/div[2]/div/a'))
 
@@ -64,9 +62,6 @@ for i in range(1000):
 
     print(df)
     time.sleep(5)
-    
-    # df = pd.concat([df, pd.DataFrame({'이름': info_list_all_inner, '링크': info_list_addr_href})])
-    # time.sleep(5)
             
     try:
         for j in range(next_buttom):
@@ -83,7 +78,3 @@ for i in range(1000):
         break
     finally:
         df.to_csv('data.csv', index=False)
-
-
-# if __name__=='__main__':
-    

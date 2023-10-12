@@ -86,7 +86,6 @@ time.sleep(1.5)
 # 검색창에 검색 키워드 입력
 search = "data"
 
-
 # 검색창 클릭
 driver.find_element(By.CSS_SELECTOR, 'button#btn_search.btn_search').click()
 time.sleep(1.5)
